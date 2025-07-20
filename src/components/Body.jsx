@@ -1,8 +1,26 @@
 import React from 'react'
 
 const Body = () => {
+  const names=['John', 'Jane', 'Doe'];
+  const clickedIt=()=>{
+    console.log("Clicked it");
+  }
+  const clickedIt2=(name)=>{
+    console.log(`Clicked it 2 with name: ${name}`);
+  }
   return (
-    <div>Body</div>
+    <div>
+      
+      <p>This is the body of the component.</p> 
+      <p>Here you can add more content or components as needed.</p>
+      <p>Feel free to customize this body section.</p>
+      <p>Remember to handle events and state as required.</p>
+      <p>Enjoy building your React application!</p>
+      p
+      <button onClick={clickedIt}>Click Me</button>
+      <button onClick={()=>clickedIt2('john chege')}>Click Me</button>
+
+    </div>
   )
 }
 
