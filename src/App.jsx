@@ -8,13 +8,15 @@ import Footer from './components/Footer'
 import Personalprofile from './components/Personalprofile'
 import Form from './components/Form'
 import RegisterForm from './components/RegisterForm'
+import Users from './components/Users'
 
 function App() {
 
   return (
     <>
-      <Personalprofile username="john" />
-      <RegisterForm />
+      {/* <Personalprofile username="john" />
+      <RegisterForm /> */}
+      <Users />
     </>
   )
 }
