@@ -1,12 +1,18 @@
 import React from 'react'
 
 const Body = () => {
-  const names=['John', 'Jane', 'Doe'];
-  const clickedIt=()=>{
+  const handlechangename=()=>{
+    const names=['John', 'Jane', 'Doe'];
+    const name= Math.floor(Math.random() * names.length);
+    return names[name];
+  }
+
+  function clickedIt() {
     console.log("Clicked it");
   }
   const clickedIt2=(name)=>{
-    console.log(`Clicked it 2 with name: ${name}`);
+    const newName=handlechangename();
+    console.log(`Clicked it again with name: ${newName}`);
   }
   return (
     <div>
@@ -19,7 +25,7 @@ const Body = () => {
       p
       <button onClick={clickedIt}>Click Me</button>
       <button onClick={()=>clickedIt2('john chege')}>Click Me</button>
-
+    
     </div>
   )
 }

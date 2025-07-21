@@ -5,14 +5,15 @@ import './App.css'
 import Header from './components/Header'
 import Body from './components/Body'
 import Footer from './components/Footer'
+import Personalprofile from './components/Personalprofile'
+import Form from './components/Form'
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Body />
-      <Footer/> 
+      <Personalprofile username="john" />
+      <Form />
     </>
   )
 }
