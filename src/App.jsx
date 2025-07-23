@@ -9,7 +9,6 @@ import Personalprofile from './components/Personalprofile'
 import Form from './components/Form'
 import RegisterForm from './components/RegisterForm'
 import Users from './components/Users'
-import LoginForm from './components/LoginForm'
 
 function App() {
 
@@ -17,8 +16,9 @@ function App() {
     <>
       {/* <Personalprofile username="john" />
       <RegisterForm /> */}
+      
       <Users />
-      <LoginForm />
+      
     </>
   )
 }

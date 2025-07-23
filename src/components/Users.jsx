@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import UserDetails from './UserDetails'
+import LoginForm from './LoginForm'
 
 const Users = () => {
     const [users, setUsers] = useState([
@@ -8,40 +9,20 @@ const Users = () => {
             username: 'john chege',
             email: 'joniemwash4@gmail.com'
         },
-        {
-            id: 2,
-            username: 'mary wambui',
-            email: 'marywambui@example.com'
-        },
-        {
-            id: 3,
-            username: 'peter kamau',
-            email: 'peterkamau@example.com'
-        },
-        {
-            id: 4,
-            username: 'lucy nduta',
-            email: 'lucynduta@example.com'
-        },
-        {
-            id: 5,
-            username: 'samuel maina',
-            email: 'samuelmaina@example.com'
-        }
-
+        
     ])
 
     return (
+       <div>
         <div>
-            {users.map((user)=>(
-                 <UserDetails key={user.id} user={user} />
-
-            )
-               
-            )}
-
-
+            <LoginForm users={users} setUsers={setUsers} />          
         </div>
+         <div>
+            {users.map((user)=>(
+                 <UserDetails key={user.id} user={user} setUsers={setUsers} />
+            ))}
+        </div>
+       </div>
     )
 }
 
